@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorSync | Login</title>
+    <link rel="stylesheet" type="text/css" href="Login/style.css"/>
+    <script src="Login/index.js" defer></script>
+    <script src="login.js" defer></script> <!-- Include the separate JavaScript file -->
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: #00ad9f;
+}
+
+::selection {
+    background: #4158d0;
+    color: #fff;
+}
+
+/* Login Navigation styles */
+.logingnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(-135deg, #4943aa , #ce7cff);
+    padding: 20px;
+    z-index: 2;
+}
+
+#nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding-left: 10px;
+}
+
+.logingnav a {
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+/* Login Form styles */
+.wrapper {
+    width: 380px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(255, 68, 68, 0.1);
+    position: absolute;
+    top: 42%; /* Adjust the top value to move the login form higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .title {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 100px;
+    color: #ffffff;
+    user-select: none;
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(-135deg, #8450a4, #474ade);
+}
+
+.wrapper form {
+    padding: 10px 30px 50px 30px;
+}
+
+.wrapper form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.wrapper form .field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid linear-gradient(-135deg, #4943aa , #ce7cff);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input:focus,
+.wrapper form .field input:valid {
+    border-color: #cd7cfe;
+}
+
+.wrapper form .field label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: #bfbbbb;
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input:focus ~ label,
+.wrapper form .field input:valid ~ label {
+    top: 0%;
+    font-size: 16px;
+    color: #4158d0;
+    background: #fff;
+    transform: translateY(-50%);
+}
+
+.wrapper form .content {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wrapper form .content .checkbox input {
+    width: 0px;
+    height: 0px;
+    background: red;
+}
+
+.wrapper form .content label {
+    color: #262626;
+    user-select: none;
+    padding-left: 5px;
+}
+
+.wrapper form .field input[type="submit"] {
+    color: #fff;
+    border: none;
+    padding: 1px 1px;
+    margin-top: 0%;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #8450a4, #474ade);
+    transition: all 0.3s ease;
+}
+
+.wrapper form .field input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+.wrapper form .signup-link {
+    color: #262626;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.wrapper form .pass-link a,
+.wrapper form .signup-link a {
+    color: #4158d0;
+    text-decoration: none;
+}
+
+.wrapper form .pass-link a:hover,
+.wrapper form .signup-link a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MD9M0FTDH0');
+</script>
+<body>
+    <div class="wrapper">
+        <div class="title">
+           Login
+        </div>
+        <form id="loginForm" action="#">
+           <div class="field">
+              <input type="text" id="usernameinpt" id="usernameinpt1" required>
+              <label>Username</label>
+           </div>
+           <div class="field">
+              <input type="password" id="passwordinpt" id="passwordinpt1"required>
+              <label>Password</label>
+           </div>
+           <div class="content">
+              <div class="checkbox">
+                 <input type="checkbox" id="remember-me">
+                 <label for="remember-me">Remember me</label>
+              </div>
+              <div class="pass-link">
+                 <a href="Login/forgotpass.html">Forgot password?</a>
+              </div>
+           </div>
+           <div class="field">
+              <input type="submit" value="Login" id="submitbtn">
+           </div>
+           <div class="signup-link">
+              Not a member? <a href="Login/register.html">Signup now</a>
+           </div>
+        </form>
+    </div>
+
+
+</body>
+<script src="password.js" defer> </script>
+</html>
